@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeerJS Video & Audio Call</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 PeerJS Call App</h1>
+        <!-- Display Peer ID -->
+        <div class="peer-info">
+            <p>Your Peer ID: <span id="peer-id">Loading...</span></p>
+            <button id="copy-id">Copy ID</button>
+        </div>
+        <!-- Input to Call Another Peer -->
+        <input type="text" id="peer-id-input" placeholder="Enter Peer ID">
+        <button id="call-button" disabled>Start Call</button>
+        <!-- Video Containers -->
+        <div class="video-container">
+            <div class="video-box">
+                <p>📹 You</p>
+                <video id="local-video" autoplay muted></video>
+            </div>
+            <div class="video-box">
+                <p>📞 Remote</p>
+                <video id="remote-video" autoplay></video>
+            </div>
+        </div>
+        <!-- Call Controls -->
+        <div class="controls">
+            <button id="mute-button" disabled>Mute</button>
+            <button id="camera-button" disabled>Camera Off</button>
+            <button id="end-call-button" disabled>End Call</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
