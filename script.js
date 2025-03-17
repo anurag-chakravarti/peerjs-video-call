@@ -1,4 +1,3 @@
-// PeerJS Initialization
 const peer = new Peer();
 const peerIdDisplay = document.getElementById("peer-id");
 const peerIdInput = document.getElementById("peer-id-input");
@@ -18,7 +17,7 @@ let isCameraOff = false;
 // Show Peer ID
 peer.on("open", (id) => {
     peerIdDisplay.innerText = id;
-    callButton.disabled = false; // Enable call functionality
+    callButton.disabled = false; 
 });
 
 // Error Handling for PeerJS
@@ -56,7 +55,7 @@ callButton.addEventListener("click", () => {
 
     const call = peer.call(peerId, localStream);
     handleCall(call);
-    callButton.disabled = true; // Disable call button while in a call
+    callButton.disabled = true; 
 });
 
 // Answer Incoming Calls
@@ -106,6 +105,6 @@ endCallButton.addEventListener("click", () => {
     if (currentCall) {
         currentCall.close();
         remoteVideo.srcObject = null;
-        callButton.disabled = false; // Re-enable call button
+        callButton.disabled = false; 
     }
 });
